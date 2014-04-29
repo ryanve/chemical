@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "chemical",
+  "description": "JavaScript interface for chemicals",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ryanve/chemical",
+  "license": "MIT",
+  "author": "Ryan Van Etten",
+  "keywords": ["chemistry"],
+  "main": "chemical.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanve/chemical.git"
+  },
+  "dependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "aok": "^1.8.1",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-jshint": "^0.9.0",
+    "universal": "^0.1.0"
+  },
+  "jshintConfig": {
+    "asi": true,
+    "boss": true,
+    "browser": true,
+    "debug": true,
+    "devel": true,
+    "eqnull": true,
+    "evil": true,
+    "expr": true,
+    "globals": {
+      "define": true
+    },
+    "jquery": true,
+    "lastsemic": true,
+    "latedef": "nofunc",
+    "laxcomma": true,
+    "maxcomplexity": 15,
+    "maxerr": 10,
+    "maxlen": 115,
+    "maxparams": 4,
+    "node": true,
+    "sub": true,
+    "supernew": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+    "worker": true
+  }
+}
