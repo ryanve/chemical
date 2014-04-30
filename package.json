@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "chemical",
   "description": "JavaScript interface for chemicals",
   "version": "0.0.0",
