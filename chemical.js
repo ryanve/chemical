@@ -1,5 +1,5 @@
 /*!
- * chemical 0.0.0+201404292358
+ * chemical 0.1.0+201405040426
  * https://github.com/ryanve/chemical
  * MIT License (c) 2014 Ryan Van Etten
  */
@@ -12,19 +12,20 @@
   chemical.prototype = Chemical.prototype
   
   /**
-   * @param {Object=} properties
+   * @param {(string|Object)=} formula or properties
    * @return {Chemical}
    */
-  function chemical(properties) {
-    return new Chemical(properties)
+  function chemical(formula) {
+    return new Chemical(formula)
   }
   
   /**
    * @constructor
-   * @param {Object=} properties
+   * @param {(string|Object)=} formula or properties
    */
-  function Chemical(properties) {
-    for (var k in properties) this[k] = properties[k]
+  function Chemical(formula) {
+    if (typeof formula == 'string') this.formula = formula
+    else for (var k in formula) this[k] = formula[k]
   }
 
   return chemical
