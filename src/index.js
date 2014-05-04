@@ -7,19 +7,20 @@
   chemical.prototype = Chemical.prototype
   
   /**
-   * @param {Object=} properties
+   * @param {(string|Object)=} formula or properties
    * @return {Chemical}
    */
-  function chemical(properties) {
-    return new Chemical(properties)
+  function chemical(formula) {
+    return new Chemical(formula)
   }
   
   /**
    * @constructor
-   * @param {Object=} properties
+   * @param {(string|Object)=} formula or properties
    */
-  function Chemical(properties) {
-    for (var k in properties) this[k] = properties[k]
+  function Chemical(formula) {
+    if (typeof formula == 'string') this.formula = formula
+    else for (var k in formula) this[k] = formula[k]
   }
 
   return chemical
